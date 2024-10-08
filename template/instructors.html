@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *Must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Clever - Education &amp; Courses Template | Instructors</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area d-flex justify-content-between align-items-center">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <a href="{% url 'teacher' %}#"><span>Phone:</span> +44 300 303 0266</a>
+                <a href="{% url 'teacher' %}#"><span>Email:</span> <span class="__cf_email__"
+                        data-cfemail="2a43444c456a49464f5c4f5804494547">[email&#160;protected]</span></a>
+            </div>
+            <!-- Follow Us -->
+            <div class="follow-us">
+                <span>Follow us</span>
+                <a href="{% url 'teacher' %}#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="{% url 'teacher' %}#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="{% url 'teacher' %}#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <!-- Navbar Area -->
+        <div class="clever-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Menu -->
+                <nav class="classy-navbar justify-content-between" id="cleverNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="{% url 'home' %}"><img src="{% static 'img/core-img/logo.png' %}"
+                            alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="{% url 'home' %}">Home</a></li>
+                                <li><a href="{% url 'teacher' %}">Instructors</a></li>
+                                <li><a href="{% url 'blog' %}">Courses</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+
+                            <!-- Search Button -->
+                            <div class="search-area">
+                                <form action="{% url 'search_course' %}" method="get">
+                                    <input type="search" name="search" id="search" placeholder="Search">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Register / Login -->
+                            {% if not user.is_authenticated %}
+                            <div class="register-login-area">
+                                <a href="{% url 'register' %}#" class="btn">Register</a>
+                                <a href="{% url 'login' %}" class="btn active">Login</a>
+                            </div>
+                            {% else %}
+                            <a href="{% url 'logout' %}" class="btn active">logout</a>
+                            {% endif %}
+
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area">
+        <!-- Breadcumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'teacher' %}#">Home</a></li>
+                <li class="breadcrumb-item"><a href="{% url 'teacher' %}#">Courses</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Art &amp; Design</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Instructors Video Start ##### -->
+    <div class="instructors-video d-flex align-items-center justify-content-center bg-img"
+        style="background-image: url({% static 'img/bg-img/bg4.jpg' %});">
+        <h2>Be The Best Teacher</h2>
+        <!-- video btn -->
+        
+    </div>
+    <!-- ##### Instructors Video End ##### -->
+
+    <!-- ##### Best Tutors Area Start ##### -->
+    <section class="best-tutors-area section-padding-100">
+        <div class="container">
+            
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="tutors-slide owl-carousel">
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="{% static 'img/bg-img/t1.png' %}" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Alex Parker</h5>
+                                <span>Teacher</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet
+                                    elit, sit amet tincidunt mauris ultrices vitae.</p>
+                                <div class="social-info">
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-instagram"
+                                            aria-hidden="true"></i></a>
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="{% static 'img/bg-img/t2.png' %}" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Alex Parker</h5>
+                                <span>Teacher</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet
+                                    elit, sit amet tincidunt mauris ultrices vitae.</p>
+                                <div class="social-info">
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-instagram"
+                                            aria-hidden="true"></i></a>
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="{% static 'img/bg-img/t3.png' %}" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Alex Parker</h5>
+                                <span>Teacher</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet
+                                    elit, sit amet tincidunt mauris ultrices vitae.</p>
+                                <div class="social-info">
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-instagram"
+                                            aria-hidden="true"></i></a>
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="{% static 'img/bg-img/t4.png' %}" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Alex Parker</h5>
+                                <span>Teacher</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet
+                                    elit, sit amet tincidunt mauris ultrices vitae.</p>
+                                <div class="social-info">
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-instagram"
+                                            aria-hidden="true"></i></a>
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="{% static 'img/bg-img/t5.png' %}" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Alex Parker</h5>
+                                <span>Teacher</span>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum laoreet
+                                    elit, sit amet tincidunt mauris ultrices vitae.</p>
+                                <div class="social-info">
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-instagram"
+                                            aria-hidden="true"></i></a>
+                                    <a href="{% url 'teacher' %}#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Best Tutors Area End ##### -->
+
+    <!-- ##### Top Teacher Area Start ##### -->
+    <section class="top-teacher-area section-padding-0-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3>Top Teachers in Every Field</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Single Teacher -->
+                {% for teacher in teachers %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-instructor d-flex align-items-center mb-30">
+                        <div class="instructor-thumb">
+                            <img src="{{teacher.image.url}}" alt="">
+                        </div>
+                        <div class="instructor-info">
+                            <h5>{{teacher.name}}</h5>
+                            <span>{{teacher.profession}}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- ##### Top Teacher Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <!-- Top Footer Area -->
+        <div class="top-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Footer Logo -->
+                        <div class="footer-logo">
+                            <a href="{% url 'home' %}"><img src="{% static 'img/core-img/logo2.png' %}" alt=""></a>
+                        </div>
+                        <!-- Copywrite -->
+                        <p><a href="{% url 'teacher' %}#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script data-cfasync="false"
+                                    src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                                template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                                    href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer Area -->
+        <div class="bottom-footer-area d-flex justify-content-between align-items-center">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <a href="{% url 'teacher' %}#"><span>Phone:</span> +44 300 303 0266</a>
+                <a href="{% url 'teacher' %}#"><span>Email:</span> <span class="__cf_email__"
+                        data-cfemail="2d44434b426d4e41485b485f034e4240">[email&#160;protected]</span></a>
+            </div>
+            <!-- Follow Us -->
+            <div class="follow-us">
+                <span>Follow us</span>
+                <a href="{% url 'teacher' %}#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="{% url 'teacher' %}#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="{% url 'teacher' %}#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js' %}"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+
+</body>
+
+</html>

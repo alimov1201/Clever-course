@@ -1,0 +1,9 @@
+{
+    "editor.suggest.showStatusBar": true,
+    "editor.suggest.shareSuggestSelections": true,
+    "editor.suggest.preview": true,
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "python.analysis.autoImportCompletions": true
+}
